@@ -8,6 +8,14 @@ const {auth, isStudent, isAdmin} = require("../middlewares/auth");
 router.post("/login", login);
 router.post("/signUp", signUp);
 
+//testing 
+router.get("/test", auth, (req, res) => {
+    res.json({
+        success: true,
+        message: "Welcome to the Protected route for TESTS."
+    })
+});
+
 //protected routes
 router.get("/student", auth, isStudent, (req, res) => {
     res.json({
