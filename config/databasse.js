@@ -12,7 +12,7 @@ const dbConnect = () => {
         family: 4, // Force IPv4
     })
     .then(() => console.log('Connected to MongoDB!'))
-    .catch((error) => {
+    .catch((error) => { 
         console.log('Issue in Db connection');
         console.error(error.message);
         process.exit(1);
